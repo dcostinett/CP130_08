@@ -5,4 +5,23 @@
 <!-- ======================================================================= -->
 <project name="08" default="jar" basedir=".">
   <import file="../lib/build.xml"/>
+
+    <signjar jar="lib/xerces.jar"
+             keystore="danKeyStore" storepass="password"
+             alias="dan" keypass="password" />
+
+    <signjar jar="${dir.dist}/stockquoter.jar"
+             keystore="danKeyStore" storepass="password"
+             alias="dan" keypass="password"/>
+
+    <jar destfile="${dir.dist}/stockquoter.jar">
+        <fileset dir="${dir.classes}" includes="config/stocklist.txt" />
+        <fileset dir="lib" includes="**/xerces.jar"/>
+        <manifest>
+            <attribute name="Main-Class" value="edu.uw.rgm.quote.StockQuoter"/>
+            <attribute name="Class-Path" value="xerces.jar"/>
+            <attribute name="Sealed" value="true" />
+        </manifest>
+    </jar>
+
 </project>
