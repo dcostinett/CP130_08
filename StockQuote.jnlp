@@ -17,6 +17,7 @@
     </security>
     <resources>
         <jar href="lib/xerces.jar"/>
+        <jar href="stockquoter.jar" main="true" />
     </resources>
-    <application-desc main-class="StockQuote"/>
+    <application-desc main-class="edu.uw.rgm.quote.StockQuote"/>
 </jnlp>

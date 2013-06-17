@@ -15,11 +15,11 @@
              alias="dan" keypass="password"/>
 
     <jar destfile="${dir.dist}/stockquoter.jar">
-        <fileset dir="${dir.classes}" includes="config/stocklist.txt" />
-        <fileset dir="lib" includes="**/xerces.jar"/>
+        <fileset dir="${dir.classes}"/>
+        <fileset dir="." includes="config/stocklist.txt" />
         <manifest>
             <attribute name="Main-Class" value="edu.uw.rgm.quote.StockQuoter"/>
-            <attribute name="Class-Path" value="xerces.jar"/>
+            <attribute name="Class-Path" value="lib/xerces.jar"/>
             <attribute name="Sealed" value="true" />
         </manifest>
     </jar>
