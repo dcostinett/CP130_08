@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- JNLP File for SwingSet2 Demo Application -->
-<jnlp spec="1.0+" codebase="http://localhost/cp130-08"
+<jnlp spec="1.0+" codebase="http://localhost/cp130-08/"
       href="StockQuote.jnlp">
     <information>
         <title>StockQuote</title>
         <vendor>UW Extension</vendor>
-        <homepage href="docs/help.html"/>
         <description>Assignment 08</description>
         <description kind="short">08</description>
-        <icon href="images/swingset2.jpg"/>
-        <icon kind="splash" href="images/splash.gif"/>
         <offline-allowed/>
     </information>
     <security>
         <all-permissions/>
     </security>
     <resources>
+        <j2se version="1.4+" />
+        <jar href="stockquoter.jar"/>
         <jar href="lib/xerces.jar"/>
-        <jar href="stockquoter.jar" main="true" />
     </resources>
-    <application-desc main-class="edu.uw.rgm.quote.StockQuote"/>
+    <application-desc main-class="edu.uw.rgm.quote.StockQuoter"/>
 </jnlp>
